@@ -83,3 +83,10 @@ M = initPoints(M)
 
 # go !!!
 processMatrix(M, 0)
+
+# creer une classe "matrix"
+# Matrix {childrenMatrix:[0 ou 4], parentMatrix:[0 ou 1], numberOfStar:0-n} 
+# faire le CALCULATING THE FORCE ACTING ON A BODY
+# 
+# 
+# 

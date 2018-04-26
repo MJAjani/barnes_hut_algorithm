@@ -26,12 +26,13 @@ def processMatrix(M, level):
 def printMatrix(M, level, leaf):
   #On realise l'arborescence, et on l'affiche
   tab = repeat_to_length('\t',level+1)
+  weight=np.count_nonzero(M)
   if leaf:
-    print(tab + 'leaf')
+    print(tab + ('leaf',weight))
   else:
-    print(tab + 'branch')
+    print(tab + ('branch',weight))
 
-def repeat_to_length(string_to_expand, length): #EXPLAIN
+def repeat_to_length(string_to_expand, length):
     return (string_to_expand * (int(length/len(string_to_expand))+1))[:length]
 
 def initMatrix(n,m):
@@ -74,21 +75,4 @@ def countPoints(M):
 ############################################
 ############################################
 
-"""# Init our system
-i = randint(2, 9)
-n = i*2
-m = n # to have a square matrix
-M = initMatrix(n, m)
 
-# 1. on place des points aleatoire dans notre matrice
-M = initPoints(M)
-
-# go !!!
-processMatrix(M, 0)
-
-# creer une classe "matrix"
-# Matrix {childrenMatrix:[0 ou 4], parentMatrix:[0 ou 1], numberOfStar:0-n} 
-# faire le CALCULATING THE FORCE ACTING ON A BODY
-# 
-# 
-# """
